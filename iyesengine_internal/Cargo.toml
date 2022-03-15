@@ -1,0 +1,111 @@
+[package]
+name = "iyesengine_internal"
+version = "0.6.0"
+edition = "2021"
+publish = false
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[features]
+# the stuff i always want
+default = [
+  "bevy/bevy_gilrs",
+  "bevy/x11",
+  "bevy/wayland",
+  "bevy/bevy_winit",
+  "bevy/bevy_core_pipeline",
+  "bevy/bevy_render",
+]
+
+# configuration for dev builds
+dev = [
+  "bevy/filesystem_watcher",
+  "bevy_prototype_debug_lines",
+]
+# configuration for release builds
+release = [
+]
+
+# configuration for 2d games
+2d = [
+  "bevy/bevy_sprite",
+  "bevy/png",
+  "bevy_asset_loader/2d",
+  "heron?/2d",
+  "benimator",
+]
+# configuration for 3d games
+3d = [
+  "bevy/bevy_pbr",
+  "bevy/bevy_gltf",
+  "bevy/hdr",
+  "bevy/dds",
+  "bevy_asset_loader/3d",
+  "heron?/3d",
+  "bevy_prototype_debug_lines?/3d",
+]
+# if using bevy ui
+bevy-ui = [
+  "2d",
+  "bevy/bevy_text",
+  "bevy/bevy_ui",
+]
+# add audio support (kira)
+audio = [
+  "bevy_kira_audio",
+]
+# add a physics engine (heron)
+physics = [
+  "heron",
+]
+# for 2d tilemap games
+tilemap = [
+  "2d",
+  "bevy_ecs_tilemap",
+]
+
+[dependencies.bevy]
+git = "https://github.com/IyesGames/bevy"
+branch = "iyes"
+default-features = false
+
+[dependencies.iyes_bevy_util]
+git = "https://github.com/IyesGames/iyes_bevy_util"
+
+[dependencies.bevy_asset_ron]
+git = "https://github.com/IyesGames/bevy_asset_ron"
+branch = "iyes"
+
+[dependencies.bevy_asset_loader]
+git = "https://github.com/IyesGames/bevy_asset_loader"
+branch = "iyes"
+features = [ "dynamic_assets" ]
+
+[dependencies.bevy_prototype_debug_lines]
+git = "https://github.com/IyesGames/bevy_debug_lines"
+branch = "iyes"
+optional = true
+
+[dependencies.benimator]
+git = "https://github.com/IyesGames/benimator"
+branch = "iyes"
+optional = true
+
+[dependencies.heron]
+git = "https://github.com/IyesGames/heron"
+branch = "iyes"
+optional = true
+
+[dependencies.bevy_ecs_tilemap]
+git = "https://github.com/IyesGames/bevy_ecs_tilemap"
+branch = "iyes"
+optional = true
+
+[dependencies.bevy_kira_audio]
+git = "https://github.com/IyesGames/bevy_kira_audio"
+branch = "iyes"
+optional = true
+default-features = false
+features = [
+  "flac",
+]

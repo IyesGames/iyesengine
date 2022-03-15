@@ -1,0 +1,23 @@
+[package]
+name = "iyesengine"
+version = "0.6.0"
+edition = "2021"
+publish = false
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+iyesengine_internal = { path = "iyesengine_internal", default-features = false }
+iyesengine_dylib = { path = "iyesengine_dylib", optional = true }
+
+[features]
+dynamic = [ "iyesengine_dylib" ]
+default = [ "iyesengine_internal/default" ]
+dev = [ "iyesengine_internal/dev" ]
+release = [ "iyesengine_internal/release" ]
+2d = [ "iyesengine_internal/2d" ]
+3d = [ "iyesengine_internal/3d" ]
+bevy-ui = [ "iyesengine_internal/bevy-ui" ]
+physics = [ "iyesengine_internal/physics" ]
+audio = [ "iyesengine_internal/audio" ]
+tilemap = [ "iyesengine_internal/tilemap" ]
