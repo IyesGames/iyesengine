@@ -88,15 +88,15 @@ pub struct IyesEverything;
 impl Plugin for IyesExtras {
     fn build(&self, app: &mut App) {
         #[cfg(feature = "bevy_kira_audio")]
-        app.add_plugin(bevy_kira_audio::AudioPlugin);
+        app.add_plugin(bevy_kira_audio::AudioPlugin::default());
         #[cfg(feature = "bevy_prototype_debug_lines")]
-        app.add_plugin(bevy_prototype_debug_lines::DebugLinesPlugin);
+        app.add_plugin(bevy_prototype_debug_lines::DebugLinesPlugin::default());
         #[cfg(feature = "benimator")]
         app.add_plugin(benimator::AnimationPlugin::default());
         #[cfg(feature = "heron")]
         app.add_plugin(heron::PhysicsPlugin::default());
         #[cfg(feature = "bevy_ecs_tilemap")]
-        app.add_plugin(bevy_ecs_tilemap::TilemapPlugin);
+        app.add_plugin(bevy_ecs_tilemap::TilemapPlugin::default());
     }
 }
 
