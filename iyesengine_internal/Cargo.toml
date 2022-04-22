@@ -1,6 +1,6 @@
 [package]
 name = "iyesengine_internal"
-version = "0.6.0"
+version = "0.7.0"
 edition = "2021"
 publish = false
 
@@ -20,7 +20,7 @@ default = [
 # configuration for dev builds
 dev = [
   "bevy/filesystem_watcher",
-  "bevy_prototype_debug_lines",
+  # "bevy_prototype_debug_lines",
 ]
 # configuration for release builds
 release = [
