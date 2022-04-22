@@ -48,6 +48,7 @@ pub use bevy_tweening;
 pub use heron;
 
 pub mod prelude {
+    pub use crate::*;
     pub use bevy::prelude::*;
 
     pub use iyes_bevy_util::prelude::*;
