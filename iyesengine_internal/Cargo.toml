@@ -89,6 +89,7 @@ branch = "iyes"
 [dependencies.iyes_progress]
 git = "https://github.com/IyesGames/iyes_progress"
 branch = "iyes"
+features = ["iyes_loopless", "assets"]
 
 [dependencies.bevy_asset_ron]
 git = "https://github.com/IyesGames/bevy_asset_ron"
