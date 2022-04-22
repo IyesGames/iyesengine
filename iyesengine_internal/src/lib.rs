@@ -48,28 +48,28 @@ pub use bevy_tweening;
 pub use heron;
 
 pub mod prelude {
-    pub use bevy::prelude::*;
+    pub use bevy::{self, prelude::*};
 
-    pub use iyes_loopless::prelude::*;
-    pub use iyes_progress::prelude::*;
+    pub use iyes_loopless::{self, prelude::*};
+    pub use iyes_progress::{self, prelude::*};
 
     #[cfg(feature = "bevy_asset_ron")]
-    pub use bevy_asset_ron::*;
+    pub use bevy_asset_ron::{self, *};
 
     #[cfg(feature = "bevy_kira_audio")]
-    pub use bevy_kira_audio::{*, Frame as AudioFrame};
+    pub use bevy_kira_audio::{self, *, Frame as AudioFrame};
 
     #[cfg(feature = "benimator")]
-    pub use benimator::{*, Frame as AnimationFrame};
+    pub use benimator::{self, *, Frame as AnimationFrame};
 
     #[cfg(feature = "bevy_ecs_tilemap")]
-    pub use bevy_ecs_tilemap::prelude::*;
+    pub use bevy_ecs_tilemap::{self, prelude::*};
 
     #[cfg(feature = "bevy_prototype_lyon")]
-    pub use bevy_prototype_lyon::prelude::*;
+    pub use bevy_prototype_lyon::{self, prelude::*};
 
     #[cfg(feature = "heron")]
-    pub use heron::prelude::*;
+    pub use heron::{self, prelude::*};
 
     #[cfg(feature = "bevy_prototype_debug_lines")]
     pub use bevy_prototype_debug_lines::DebugLines;
