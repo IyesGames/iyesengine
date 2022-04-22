@@ -82,6 +82,14 @@ default-features = false
 git = "https://github.com/IyesGames/iyes_bevy_util"
 branch = "iyes"
 
+[dependencies.iyes_loopless]
+git = "https://github.com/IyesGames/iyes_loopless"
+branch = "iyes"
+
+[dependencies.iyes_progress]
+git = "https://github.com/IyesGames/iyes_progress"
+branch = "iyes"
+
 [dependencies.bevy_asset_ron]
 git = "https://github.com/IyesGames/bevy_asset_ron"
 branch = "iyes"

@@ -16,6 +16,10 @@ pub use bevy::transform as bevy_transform;
 pub use bevy::utils as bevy_utils;
 pub use bevy::window as bevy_window;
 
+pub use iyes_bevy_util;
+pub use iyes_loopless;
+pub use iyes_progress;
+
 #[cfg(feature = "benimator")]
 pub use benimator;
 
@@ -45,6 +49,9 @@ pub use heron;
 
 pub mod prelude {
     pub use bevy::prelude::*;
+
+    pub use iyes_loopless::prelude::*;
+    pub use iyes_progress::prelude::*;
 
     #[cfg(feature = "bevy_asset_ron")]
     pub use bevy_asset_ron::*;
