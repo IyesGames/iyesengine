@@ -63,6 +63,11 @@ tilemap = [
   "2d",
   "bevy_ecs_tilemap",
 ]
+# for 2d shapes
+shapes = [
+  "2d",
+  "bevy_prototype_lyon",
+]
 
 [dependencies.bevy]
 git = "https://github.com/IyesGames/bevy"
@@ -99,6 +104,11 @@ optional = true
 
 [dependencies.bevy_ecs_tilemap]
 git = "https://github.com/IyesGames/bevy_ecs_tilemap"
+branch = "iyes"
+optional = true
+
+[dependencies.bevy_prototype_lyon]
+git = "https://github.com/IyesGames/bevy_prototype_lyon"
 branch = "iyes"
 optional = true
 

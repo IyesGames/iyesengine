@@ -34,6 +34,9 @@ pub use bevy_kira_audio;
 #[cfg(feature = "bevy_prototype_debug_lines")]
 pub use bevy_prototype_debug_lines;
 
+#[cfg(feature = "bevy_prototype_lyon")]
+pub use bevy_prototype_lyon;
+
 #[cfg(feature = "bevy_tweening")]
 pub use bevy_tweening;
 
@@ -54,6 +57,9 @@ pub mod prelude {
 
     #[cfg(feature = "bevy_ecs_tilemap")]
     pub use bevy_ecs_tilemap::prelude::*;
+
+    #[cfg(feature = "bevy_prototype_lyon")]
+    pub use bevy_prototype_lyon::prelude::*;
 
     #[cfg(feature = "heron")]
     pub use heron::prelude::*;
@@ -97,6 +103,8 @@ impl Plugin for IyesExtras {
         app.add_plugin(heron::PhysicsPlugin::default());
         #[cfg(feature = "bevy_ecs_tilemap")]
         app.add_plugin(bevy_ecs_tilemap::TilemapPlugin::default());
+        #[cfg(feature = "bevy_prototype_lyon")]
+        app.add_plugin(bevy_prototype_lyon::prelude::ShapePlugin);
     }
 }
 
