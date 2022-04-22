@@ -30,6 +30,8 @@ release = [
 2d = [
   "bevy/bevy_sprite",
   "bevy/png",
+  "bevy/ktx2",
+  "bevy/zstd",
   "bevy_asset_loader/2d",
   "heron?/2d",
   "benimator",
@@ -40,6 +42,8 @@ release = [
   "bevy/bevy_gltf",
   "bevy/hdr",
   "bevy/dds",
+  "bevy/ktx2",
+  "bevy/zstd",
   "bevy_asset_loader/3d",
   "heron?/3d",
   "bevy_prototype_debug_lines?/3d",
