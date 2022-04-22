@@ -4,12 +4,13 @@
 
 This is my personal distribution of the Bevy Game Engine.
 
-Based on my [Bevy fork](https://github.com/IyesGames/bevy), which includes
-an assortment of patches on top of the current Bevy release.
+Includes all of my own plugins and helper libraries:
+ - [`iyes_bevy_util`](https://github.com/IyesGames/iyes_bevy_util)
+ - [`iyes_loopless`](https://github.com/IyesGames/iyes_loopless)
+ - [`iyes_progress`](https://github.com/IyesGames/iyes_progress)
+ - [`bevy_asset_ron`](https://github.com/IyesGames/bevy_asset_ron)
 
-Includes all of my own plugins and helper libraries.
-
-Includes an assortment of community plugins (also forked) that I like to
+Includes an assortment of community plugins that I like to
 use in my projects:
 
  - [`bevy_asset_loader`](https://github.com/NiklasEi/bevy_asset_loader)
@@ -18,6 +19,7 @@ use in my projects:
  - [`bevy_kira_audio`](https://github.com/NiklasEi/bevy_kira_audio)
  - [`benimator`](https://github.com/jcornaz/benimator)
  - [`bevy_ecs_tilemap`](https://github.com/StarArawn/bevy_ecs_tilemap)
+ - [`bevy_prototype_lyon`](https://github.com/IyesGames/bevy_prototype_lyon)
  - [`heron`](https://github.com/jcornaz/heron)
  - ... more will be added as I need them
 
@@ -26,6 +28,9 @@ use in my projects:
 Everything is configured to work well together. When necessary, `iyesengine`
 provides glue to make plugins play nice with each other and with my custom
 stuff.
+
+All dependencies point at my forks, so I can tweak and reconfigure them as
+needed.
 
 ## Configuration
 
@@ -40,6 +45,7 @@ The available features are:
  - `audio`: add support for audio with `bevy_kira_audio` (`flac` format support only)
  - `physics`: include `heron`, configured respectively to the `2d` and `3d` features
  - `tilemap`: configure for a 2D tilemap game; implies `2d`
+ - `shapes`: add support for 2D shapes (with `bevy_prototype_lyon`)
 
 Additionally, there are `dev` and `release` features, that can be enabled
 to apply special configurations for dev and release builds, respectively.
@@ -61,6 +67,7 @@ features = [
   "audio",
   "physics",
   "tilemap",
+  "shapes",
 ]
 ```
 
