@@ -50,6 +50,7 @@ pub use heron;
 pub mod prelude {
     pub use bevy::{self, prelude::*};
 
+    pub use iyes_bevy_util::{self, prelude::*};
     pub use iyes_loopless::{self, prelude::*};
     pub use iyes_progress::{self, prelude::*};
 
