@@ -28,6 +28,7 @@ release = [
 
 # configuration for 2d games
 2d = [
+  "iyes_bevy_util/2d",
   "bevy/bevy_sprite",
   "bevy/png",
   "bevy/ktx2",
@@ -50,6 +51,7 @@ release = [
 ]
 # if using bevy ui
 bevy-ui = [
+  "iyes_bevy_util/bevy_ui",
   "2d",
   "bevy/bevy_text",
   "bevy/bevy_ui",
