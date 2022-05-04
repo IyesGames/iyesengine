@@ -33,6 +33,7 @@ release = [
   "bevy/png",
   "bevy/ktx2",
   "bevy/zstd",
+  "bevy_tweening/bevy_sprite",
   "bevy_asset_loader/2d",
   "heron?/2d",
   "benimator",
@@ -53,6 +54,7 @@ release = [
 bevy-ui = [
   "iyes_bevy_util/bevy_ui",
   "2d",
+  "bevy_tweening/bevy_ui",
   "bevy/bevy_text",
   "bevy/bevy_ui",
 ]
@@ -96,6 +98,11 @@ features = ["iyes_loopless", "assets"]
 [dependencies.bevy_asset_ron]
 git = "https://github.com/IyesGames/bevy_asset_ron"
 branch = "iyes"
+
+[dependencies.bevy_tweening]
+git = "https://github.com/IyesGames/bevy_tweening"
+branch = "iyes"
+default-features = false
 
 [dependencies.bevy_asset_loader]
 git = "https://github.com/IyesGames/bevy_asset_loader"
