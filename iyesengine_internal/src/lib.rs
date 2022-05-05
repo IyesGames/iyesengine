@@ -20,14 +20,12 @@ pub use iyes_bevy_util;
 pub use iyes_loopless;
 pub use iyes_progress;
 
+pub use bevy_asset_loader;
+pub use bevy_asset_ron;
+pub use bevy_tweening;
+
 #[cfg(feature = "benimator")]
 pub use benimator;
-
-#[cfg(feature = "bevy_asset_loader")]
-pub use bevy_asset_loader;
-
-#[cfg(feature = "bevy_asset_ron")]
-pub use bevy_asset_ron;
 
 #[cfg(feature = "bevy_ecs_tilemap")]
 pub use bevy_ecs_tilemap;
@@ -41,9 +39,6 @@ pub use bevy_prototype_debug_lines;
 #[cfg(feature = "bevy_prototype_lyon")]
 pub use bevy_prototype_lyon;
 
-#[cfg(feature = "bevy_tweening")]
-pub use bevy_tweening;
-
 #[cfg(feature = "heron")]
 pub use heron;
 
@@ -55,7 +50,6 @@ pub mod prelude {
     pub use iyes_loopless::prelude::*;
     pub use iyes_progress::prelude::*;
 
-    #[cfg(feature = "bevy_asset_ron")]
     pub use bevy_asset_ron::*;
 
     #[cfg(feature = "bevy_kira_audio")]
@@ -102,6 +96,7 @@ pub struct IyesEverything;
 
 impl Plugin for IyesExtras {
     fn build(&self, app: &mut App) {
+        app.add_plugin(bevy_tweening::TweeningPlugin);
         #[cfg(feature = "bevy_kira_audio")]
         app.add_plugin(bevy_kira_audio::AudioPlugin::default());
         #[cfg(feature = "bevy_prototype_debug_lines")]
