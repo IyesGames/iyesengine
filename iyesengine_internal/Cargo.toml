@@ -78,65 +78,52 @@ shapes = [
 ]
 
 [dependencies.bevy]
-git = "https://github.com/IyesGames/bevy"
-branch = "iyes"
+version = "*"
 default-features = false
 
 [dependencies.iyes_bevy_util]
 git = "https://github.com/IyesGames/iyes_bevy_util"
-branch = "iyes"
 
 [dependencies.iyes_loopless]
 git = "https://github.com/IyesGames/iyes_loopless"
-branch = "iyes"
 
 [dependencies.iyes_progress]
 git = "https://github.com/IyesGames/iyes_progress"
-branch = "iyes"
 features = ["iyes_loopless", "assets"]
 
 [dependencies.bevy_asset_ron]
 git = "https://github.com/IyesGames/bevy_asset_ron"
-branch = "iyes"
 
 [dependencies.bevy_tweening]
 git = "https://github.com/IyesGames/bevy_tweening"
-branch = "iyes"
 default-features = false
 
 [dependencies.bevy_asset_loader]
 git = "https://github.com/IyesGames/bevy_asset_loader"
-branch = "iyes"
 features = [ "dynamic_assets" ]
 
 [dependencies.bevy_prototype_debug_lines]
 git = "https://github.com/IyesGames/bevy_debug_lines"
-branch = "iyes"
 optional = true
 
 [dependencies.benimator]
 git = "https://github.com/IyesGames/benimator"
-branch = "iyes"
 optional = true
 
 [dependencies.heron]
 git = "https://github.com/IyesGames/heron"
-branch = "iyes"
 optional = true
 
 [dependencies.bevy_ecs_tilemap]
 git = "https://github.com/IyesGames/bevy_ecs_tilemap"
-branch = "iyes"
 optional = true
 
 [dependencies.bevy_prototype_lyon]
 git = "https://github.com/IyesGames/bevy_prototype_lyon"
-branch = "iyes"
 optional = true
 
 [dependencies.bevy_kira_audio]
 git = "https://github.com/IyesGames/bevy_kira_audio"
-branch = "iyes"
 optional = true
 default-features = false
 features = [

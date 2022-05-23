@@ -30,7 +30,10 @@ provides glue to make plugins play nice with each other and with my custom
 stuff.
 
 All dependencies point at my forks, so I can tweak and reconfigure them as
-needed.
+needed. Only tested to work if all dependencies are overriden to point to
+the version from `IyesGames/*` forked repos, using cargo `[patch]` in the
+user project. See [minewars](https://github.com/IyesGames/minewars/blob/main/Cargo.toml)
+for an example.
 
 ## Configuration
 
