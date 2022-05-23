@@ -53,7 +53,7 @@ pub mod prelude {
     pub use bevy_asset_ron::*;
 
     #[cfg(feature = "bevy_kira_audio")]
-    pub use bevy_kira_audio::{*, Frame as AudioFrame};
+    pub use bevy_kira_audio::*;
 
     #[cfg(feature = "benimator")]
     pub use benimator::{*, Frame as AnimationFrame};
